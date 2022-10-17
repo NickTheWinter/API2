@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c47c646f71e04fff98cf6cb09ec91a8a" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.airlines" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.airplane_models" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.airplanes" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.airports" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.branches" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.cities" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.countries" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.cruise_offers" Width="1.5" PointX="7.5" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.cruises" Width="1.5" PointX="5.25" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.flights" Width="1.5" PointX="7.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.food" Width="1.5" PointX="5.25" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.hotels" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.operators" Width="1.5" PointX="5.25" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.organizers" Width="1.5" PointX="7.5" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ports" Width="1.5" PointX="5.25" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ship_classes" Width="1.5" PointX="0.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ships" Width="1.5" PointX="3" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tour_offers" Width="1.5" PointX="9.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tours" Width="1.5" PointX="7.5" PointY="12.25" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_airplane_airline_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_airplane_model_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_flight_airplane_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_airport_city_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_flight_departure_airport_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_flight_landing_airport_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_branch_city_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_branch_organizer_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_city_country_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_hotel_city_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_port_city_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_cruise_offer_cruise_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_cruise_offer_departure_port_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_cruise_offer_ending_port_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_cruise_offer_organizer_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_cruise_operator_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_cruise_ship_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tour_offer_flight_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tour_offer_return_flight_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tour_food_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tour_hotel_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tour_operator_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tour_offer_organizer_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ship_class_id" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tour_offer_tour_id" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
