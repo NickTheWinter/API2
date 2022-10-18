@@ -7,23 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication2.Entities
+namespace WebApplication2.Entyties
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class airplane_models
+    public partial class cruises
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public airplane_models()
+        public cruises()
         {
-            this.airplanes = new HashSet<airplanes>();
+            this.cruise_offers = new HashSet<cruise_offers>();
         }
     
-        public int airplane_model_id { get; set; }
-        public string airplane_model_name { get; set; }
+        public int cruise_id { get; set; }
+        public string cruise_name { get; set; }
+        public string cruise_information { get; set; }
+        public int cruise_operator { get; set; }
+        public int cruise_ship { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<airplanes> airplanes { get; set; }
+        public virtual ICollection<cruise_offers> cruise_offers { get; set; }
+        public virtual operators operators { get; set; }
+        public virtual ships ships { get; set; }
     }
 }

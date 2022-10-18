@@ -7,34 +7,30 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication2.Entities
+namespace WebApplication2.Entyties
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class cities
+    public partial class ports
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public cities()
+        public ports()
         {
-            this.airports = new HashSet<airports>();
-            this.branches = new HashSet<branches>();
-            this.hotels = new HashSet<hotels>();
-            this.ports = new HashSet<ports>();
+            this.cruise_offers = new HashSet<cruise_offers>();
+            this.cruise_offers1 = new HashSet<cruise_offers>();
         }
     
-        public int city_id { get; set; }
-        public string city_name { get; set; }
-        public int city_country { get; set; }
+        public int port_id { get; set; }
+        public string port_name { get; set; }
+        public int port_city { get; set; }
+        public string port_address { get; set; }
+        public string port_phone_number { get; set; }
     
+        public virtual cities cities { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<airports> airports { get; set; }
+        public virtual ICollection<cruise_offers> cruise_offers { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<branches> branches { get; set; }
-        public virtual countries countries { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<hotels> hotels { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ports> ports { get; set; }
+        public virtual ICollection<cruise_offers> cruise_offers1 { get; set; }
     }
 }

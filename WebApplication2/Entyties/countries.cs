@@ -7,22 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication2.Entities
+namespace WebApplication2.Entyties
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class branches
+    public partial class countries
     {
-        public int branch_id { get; set; }
-        public string branch_name { get; set; }
-        public int branch_organizer { get; set; }
-        public int branch_city { get; set; }
-        public string branch_street { get; set; }
-        public string branch_home_number { get; set; }
-        public string branch_phone_number { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public countries()
+        {
+            this.cities = new HashSet<cities>();
+        }
     
-        public virtual cities cities { get; set; }
-        public virtual organizers organizers { get; set; }
+        public int country_id { get; set; }
+        public string country_name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<cities> cities { get; set; }
     }
 }

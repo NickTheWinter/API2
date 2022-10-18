@@ -8,22 +8,24 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using WebApplication2.Entities;
+using WebApplication2.Entyties;
+using WebApplication2.Models;
 
 namespace WebApplication2.Controllers
 {
     public class airlinesController : ApiController
     {
-        private Entities db = new Entities();
+        private Entities1 db = new Entities1();
 
         // GET: api/airlines
-        public IQueryable<airlines> Getairlines()
+        [ResponseType(typeof(List<airlineModel>))]
+        public IHttpActionResult Getairlines()
         {
-            return db.airlines;
+            return Ok(db.airlines.ToList().ConvertAll(x=> new airlineModel(x)));
         }
 
         // GET: api/airlines/5
-        [ResponseType(typeof(airlines))]
+        [ResponseType(typeof(List<airlineModel>))]
         public IHttpActionResult Getairlines(int id)
         {
             airlines airlines = db.airlines.Find(id);

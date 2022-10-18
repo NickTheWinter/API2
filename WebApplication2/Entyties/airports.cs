@@ -7,35 +7,30 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication2.Entities
+namespace WebApplication2.Entyties
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class flights
+    public partial class airports
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public flights()
+        public airports()
         {
-            this.tour_offers = new HashSet<tour_offers>();
-            this.tour_offers1 = new HashSet<tour_offers>();
+            this.flights = new HashSet<flights>();
+            this.flights1 = new HashSet<flights>();
         }
     
-        public int flight_id { get; set; }
-        public int flight_airplane { get; set; }
-        public string flight_departure_airport { get; set; }
-        public System.DateTime flight_departure_date { get; set; }
-        public System.TimeSpan flight_departure_time { get; set; }
-        public string flight_landing_airport { get; set; }
-        public System.DateTime flight_landing_date { get; set; }
-        public System.TimeSpan flight_landing_time { get; set; }
+        public string airport_id { get; set; }
+        public string airport_name { get; set; }
+        public int airport_city { get; set; }
+        public string airport_address { get; set; }
+        public string airport_phone_number { get; set; }
     
-        public virtual airplanes airplanes { get; set; }
-        public virtual airports airports { get; set; }
-        public virtual airports airports1 { get; set; }
+        public virtual cities cities { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tour_offers> tour_offers { get; set; }
+        public virtual ICollection<flights> flights { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tour_offers> tour_offers1 { get; set; }
+        public virtual ICollection<flights> flights1 { get; set; }
     }
 }

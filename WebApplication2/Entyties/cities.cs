@@ -7,27 +7,34 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication2.Entities
+namespace WebApplication2.Entyties
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class operators
+    public partial class cities
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public operators()
+        public cities()
         {
-            this.cruises = new HashSet<cruises>();
-            this.tours = new HashSet<tours>();
+            this.airports = new HashSet<airports>();
+            this.branches = new HashSet<branches>();
+            this.hotels = new HashSet<hotels>();
+            this.ports = new HashSet<ports>();
         }
     
-        public int operator_id { get; set; }
-        public string operator_name { get; set; }
-        public string operator_website { get; set; }
+        public int city_id { get; set; }
+        public string city_name { get; set; }
+        public int city_country { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<cruises> cruises { get; set; }
+        public virtual ICollection<airports> airports { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tours> tours { get; set; }
+        public virtual ICollection<branches> branches { get; set; }
+        public virtual countries countries { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<hotels> hotels { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ports> ports { get; set; }
     }
 }

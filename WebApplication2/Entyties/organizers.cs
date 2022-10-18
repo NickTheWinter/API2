@@ -7,30 +7,30 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication2.Entities
+namespace WebApplication2.Entyties
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class airports
+    public partial class organizers
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public airports()
+        public organizers()
         {
-            this.flights = new HashSet<flights>();
-            this.flights1 = new HashSet<flights>();
+            this.branches = new HashSet<branches>();
+            this.cruise_offers = new HashSet<cruise_offers>();
+            this.tour_offers = new HashSet<tour_offers>();
         }
     
-        public string airport_id { get; set; }
-        public string airport_name { get; set; }
-        public int airport_city { get; set; }
-        public string airport_address { get; set; }
-        public string airport_phone_number { get; set; }
+        public int organizer_id { get; set; }
+        public string organizer_name { get; set; }
+        public string organizer_website { get; set; }
     
-        public virtual cities cities { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<flights> flights { get; set; }
+        public virtual ICollection<branches> branches { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<flights> flights1 { get; set; }
+        public virtual ICollection<cruise_offers> cruise_offers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tour_offers> tour_offers { get; set; }
     }
 }

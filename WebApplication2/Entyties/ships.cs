@@ -7,30 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication2.Entities
+namespace WebApplication2.Entyties
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class organizers
+    public partial class ships
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public organizers()
+        public ships()
         {
-            this.branches = new HashSet<branches>();
-            this.cruise_offers = new HashSet<cruise_offers>();
-            this.tour_offers = new HashSet<tour_offers>();
+            this.cruises = new HashSet<cruises>();
         }
     
-        public int organizer_id { get; set; }
-        public string organizer_name { get; set; }
-        public string organizer_website { get; set; }
+        public int ship_id { get; set; }
+        public string ship_name { get; set; }
+        public int ship_class { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<branches> branches { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<cruise_offers> cruise_offers { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tour_offers> tour_offers { get; set; }
+        public virtual ICollection<cruises> cruises { get; set; }
+        public virtual ship_classes ship_classes { get; set; }
     }
 }

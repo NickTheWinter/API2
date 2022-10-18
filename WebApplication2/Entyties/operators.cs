@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication2.Entities
+namespace WebApplication2.Entyties
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class airplanes
+    public partial class operators
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public airplanes()
+        public operators()
         {
-            this.flights = new HashSet<flights>();
+            this.cruises = new HashSet<cruises>();
+            this.tours = new HashSet<tours>();
         }
     
-        public int airplane_id { get; set; }
-        public string airplane_tail_number { get; set; }
-        public int airplane_model { get; set; }
-        public int airplane_airline { get; set; }
+        public int operator_id { get; set; }
+        public string operator_name { get; set; }
+        public string operator_website { get; set; }
     
-        public virtual airlines airlines { get; set; }
-        public virtual airplane_models airplane_models { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<flights> flights { get; set; }
+        public virtual ICollection<cruises> cruises { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tours> tours { get; set; }
     }
 }

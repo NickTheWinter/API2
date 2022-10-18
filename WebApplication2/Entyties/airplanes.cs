@@ -7,29 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication2.Entities
+namespace WebApplication2.Entyties
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class hotels
+    public partial class airplanes
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public hotels()
+        public airplanes()
         {
-            this.tours = new HashSet<tours>();
+            this.flights = new HashSet<flights>();
         }
     
-        public int hotel_id { get; set; }
-        public string hotel_name { get; set; }
-        public int hotel_rating { get; set; }
-        public string hotel_description { get; set; }
-        public int hotel_city { get; set; }
-        public string hotel_street { get; set; }
-        public string hotel_home_number { get; set; }
+        public int airplane_id { get; set; }
+        public string airplane_tail_number { get; set; }
+        public int airplane_model { get; set; }
+        public int airplane_airline { get; set; }
     
-        public virtual cities cities { get; set; }
+        public virtual airlines airlines { get; set; }
+        public virtual airplane_models airplane_models { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tours> tours { get; set; }
+        public virtual ICollection<flights> flights { get; set; }
     }
 }

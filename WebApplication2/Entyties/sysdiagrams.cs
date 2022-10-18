@@ -7,23 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication2.Entities
+namespace WebApplication2.Entyties
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class tour_offers
+    public partial class sysdiagrams
     {
-        public int tour_offer_id { get; set; }
-        public int tour_offer_organizer { get; set; }
-        public int tour_offer_tour { get; set; }
-        public int tour_offer_flight { get; set; }
-        public int tour_offer_return_flight { get; set; }
-        public int tour_offer_price { get; set; }
-    
-        public virtual flights flights { get; set; }
-        public virtual flights flights1 { get; set; }
-        public virtual organizers organizers { get; set; }
-        public virtual tours tours { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }
